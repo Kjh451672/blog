@@ -6,7 +6,7 @@ Have you ever done anything so repetitive, that it was almost hypnotizing? When 
 
 Prior to learning Python, the first coding language I ever learned was Javascript. Granted, considering the teacher I learned it from, I don’t believe I was able to grasp the concept very well. However, if I hadn’t learned Javascript, it would have been a lot harder to understand Python, considering the two are very similar coding languages, with similar data types.
  
-<img src="/blog/images/data_types.png" height="300">
+<img src="/blog/images/data_types.png" height="350">
 
 When I say data types, I mean that in reference to variables. Variables are quick ways to store a specific data type, like a string (text), a boolean (true or false), an integer (whole number), or a float (decimal number). Once we learned the “basics” we were able to apply them to our first game: a text-based adventure game.
 
@@ -14,7 +14,7 @@ When I say data types, I mean that in reference to variables. Variables are quic
 
 A text-based adventure game is a game with a premade set of rules, along with a linear story. Your options are presented to you in forms of sentences, where you have to type in one of the options presented to you. It was at this point where I realized that this project would not only be repetitive, but also very tedious.
 
-<img src="/blog/images/game_title.png" height = "300">
+<img src="/blog/images/game_title.png">
 
 Now THIS particular step was actually in the later stages of “development”, but one of the things we added to our text-based adventure games was something called ASCII Art. ASCII is sort of like pixel art, but it uses text to create words in interesting styles like in the picture above, or picture of objects out of keys like these ( * ` ~ - _, etc.).
 
