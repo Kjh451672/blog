@@ -2,7 +2,7 @@
 
  When you hear the term "debugging", you could take it pretty literal and pretty metaphorical. But in actuality, debugging is just a term that programmers use when there is an error in the code that causes it to either not work, or not run as intended. But before I get into my experience with debugging, lets get into how this whole term sprung up in the first place.
 
- ## History of "Debugging"
+## History of "Debugging"
 
 <img src="/blog/images/moth_debugging.png" height="350">
 
