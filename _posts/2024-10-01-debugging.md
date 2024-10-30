@@ -1,16 +1,16 @@
 # Daily Dose of Debugging
 
- When you hear the term "debugging", you could take it pretty literal and pretty metaphorical. But in actuality, debugging is just a term that programmers use when there is an error in the code that causes it to either not work, or not run as intended. But before I get into my experience with debugging, lets get into how this whole term sprung up in the first place.
+ When you hear the term "debugging", you could take it pretty literally and pretty metaphorically. But in actuality, debugging is just a term that programmers use when there is an error in the code that causes it to either not work, or not run as intended. But before I get into my experience with debugging, lets get into how this whole term sprung up in the first place.
 
 ## History of "Debugging"
 
 <img src="/blog/images/moth_debugging.png" height="350">
 
- The term of "bug" or "debugging" first came to be, when computers were still a very new concept to the world. The use of the term gor widespread in 1945, but was first ever used by Thomas Edison in 1878. One day, Thomas Edison had some toruble with his personal computer. After inspecting it, he found a literal bug crawling around the inside of his computer, messing with the curciutry. Hence, the term "debugging" was born.
+ The term of "bug" or "debugging" first came to be, when computers were still a very new concept to the world. The use of the term got widespread in 1945, but was first ever used by Thomas Edison in 1878. One day, Thomas Edison had some trouble with his personal computer. After inspecting it, he found a literal bug crawling around the inside of his computer, messing with the curcuitry. Hence, the term "debugging" was born.
 
 ## Debugging: Example #1
 
-To test our skills on debugging, our teacher gave us various snippets of code with a minimalamount of errors, that caused the code to either crash, or not work as intended. This first snippet of code was an example he made for us to give us an idea oon what to fix and what to describe.
+To test our skills on debugging, our teacher gave us various snippets of code with a minimal amount of errors that caused the code to either crash, or not work as intended. This first snippet of code was an example he made for us to give us an idea on what to fix and what to describe.
 
 ```python
 temperature = 75
@@ -23,10 +23,10 @@ elif temperature < 0:
     print("It's cold")
 ```
 
-The expected purpose of this code is to determine whether it is cold or hot, depending on the value of the temperature. However, if you take a closer look at the code, you may realize that is does not work as intended, as it doesnt account for number between 0 and 50.
+The expected purpose of this code is to determine whether it is cold or hot, depending on the value of the temperature. However, if you take a closer look at the code, you may realize that it does not work as intended, as it doesn't account for numbers between 0 and 50.
 
 ```python
-#Added = sign to the first elif statement, and changed the second elif statment to an else statement 
+#Added = sign to the first elif statement, and changed the second elif statement to an else statement 
 if temperature > 80:
     print("It's hot")
 elif temperature >= 50:
@@ -63,7 +63,7 @@ for char in text:
 print(count)
 ```
 
-To fix this code, all I havd to do was change the closed quotation marks to an open one, so it actually reads the open spaces in the string. Now this for-loop will identify all the spaces in a given string. Whenever you're writing code, it's always best to double check what youve written since the computer will also miss things that you don't account for.
+To fix this code, all I had to do was change the closed quotation marks to an open one, so it actually reads the open spaces in the string. Now this for-loop will identify all the spaces in a given string. Whenever you're writing code, it's always best to double check what you've written since the computer will also miss things that you don't account for.
 
 ## Debugging: Example #3
 
@@ -80,7 +80,7 @@ for num in range(1, n):
 
  This next snippet of code gets more involved with the user, as they require them to input any number they want. Once they do, the for-loop prints out all of the numbers in that range, along with a print statement stating whether that number is even or odd. There are several problems with this snippet of code.
 
- The first part of the if-statement doesn't work properly since it is only true when there is a remainder and false when it isn't. Odd numbers would be read as even and vice versa. The nvariable is also declared improperly, as it's defined as a string. Also, whenever range is used, the max number is always one short than what is used, meaing when the user inputs a number, the range will be one less than it should be. 
+ The first part of the if-statement doesn't work properly since it is only true when there is a remainder and false when it isn't. Odd numbers would be read as even and vice versa. The n variable is also declared improperly, as it's defined as a string. Also, whenever range is used, the max number is always one short than what is used, meaning when the user inputs a number, the range will be one less than it should be. 
 
  ```python
  print("give me a number")
@@ -95,7 +95,7 @@ for num in range(1, n + 1):
         print(num, "is odd.")
  ```
 
-What I did to fix these bugs, was change the greater than sign to a double equal sign, so the code properly reads for 0, and change n = int(input()), and in range have n + 1. This way, n is registered as an integr, the range function accounts for all the numbers the user wants, and the if statement now properly checks to see what numbers ar even or odd.
+What I did to fix these bugs, was change the greater than sign to a double equal sign, so the code properly reads for 0, and change n = int(input()), and in range have n + 1. This way, n is registered as an integer, the range function accounts for all the numbers the user wants, and the if statement now properly checks to see what numbers are even or odd.
 
 ## Debugging: Example #4
 
@@ -111,7 +111,7 @@ else:
 
   print("Factorial of " + num + "is" + result)
 ```
-The purpose of this code snippet is to calculate the factoral of a given number. There are also several problems with this code. The range in the conditional is off by 1 as it will do 1 less than the imputed range, and the print statement will result in a TypeError, as the variables used in it are not properly concatenated.
+The purpose of this code snippet is to calculate the factorial of a given number. There are also several problems with this code. The range in the conditional is off by 1 as it will do 1 less than the imputed range, and the print statement will result in a TypeError, as the variables used in it are not properly concatenated.
 
 ```python
 num = int(input("Enter an integer: "))
@@ -153,7 +153,7 @@ The attempts variable is in the wrong spot, and the conditional for the if-state
 attempts = 1
 correct_password = "secret"
 #Added a break statement if password is correctly guessed, moved attempts variable to end of if-statement 
-#set attempts = 1, changed condition to if attempts ==3, and chnged if-statement to have password = correct password
+#set attempts = 1, changed condition to if attempts ==3, and changed if-statement to have password = correct password
 while True:
     password = input("Enter your password: ")
     if password == correct_password:
@@ -167,4 +167,4 @@ while True:
     attempts += 1
 ```
 
-To fix this, I added a break statement into the if-statement if the password is guessed correctly. I also moved the attempts variable to the end of the while-loop, so that it increments after every iteration. I set the number of attempts to a base value of one, since it only increases at the end of each guess, adn finally, I changed the first if-statement's conditional so it properly checks for the correct password.
+To fix this, I added a break statement into the if-statement if the password is guessed correctly. I also moved the attempts variable to the end of the while-loop, so that it increments after every iteration. I set the number of attempts to a base value of one, since it only increases at the end of each guess, and finally, I changed the first if-statement conditional so it properly checks for the correct password.
